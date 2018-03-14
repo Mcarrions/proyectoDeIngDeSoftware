@@ -1,3 +1,34 @@
-$('.message a').click(function(){
-   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+var usuarios = [{
+    "email": "alejandro@hotmail.com",
+    "password": "alejandro"
+}, {
+    "email": "prueba",
+    "password": "prueba"
+}]
+
+$(document).ready(function () {
+
+    $('.message a').click(function () {
+        $('form').animate({
+            height: "toggle",
+            opacity: "toggle"
+        }, "slow");
+    });
+
+    $('.login-form').submit(function(event) {
+        var email = $('#login-email').val();
+        var password = $('#login-password').val();
+        alert(password);
+
+        for (var i = 0; i < usuarios.length; i++) {
+            if (usuarios[i].email == email && usuarios[i].password == password) {
+                //window.location.replace("http://stackoverflow.com");
+                return true;
+                break;
+            }
+        }
+        alert("Login was unsuccessful, please check your username and password");
+        return false;
+    });
+
 });
