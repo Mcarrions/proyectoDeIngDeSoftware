@@ -18,11 +18,11 @@ $(document).ready(function () {
     $('.login-form').submit(function(event) {
         var email = $('#login-email').val();
         var password = $('#login-password').val();
-        alert(password);
+        
 
         for (var i = 0; i < usuarios.length; i++) {
             if (usuarios[i].email == email && usuarios[i].password == password) {
-                //window.location.replace("http://stackoverflow.com");
+                
                 return true;
                 break;
             }
