@@ -1,5 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+#balance {
+    display:block;
+    font-family: sans-serif;
+    width:310px;
+    height:40px;
+    margin:10px auto;
+    text-align: right;
+    border:0;
+    background:#3b3535;
+    color:#fff;
+    padding-top:20px;
+    font-size:20px;
+    margin-left: 25px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+    top:0px;
+}
+
+
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -53,6 +74,29 @@
   color: #4CAF50;
   text-decoration: none;
 }
+
+.select {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.select-nice {
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	
+}
+
 .form .register-form {
   display: none;
 }
