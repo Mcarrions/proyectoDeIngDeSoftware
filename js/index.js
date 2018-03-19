@@ -6,6 +6,8 @@ var usuarios = [{
     "password": "prueba"
 }]
 
+var balance;
+
 $(document).ready(function () {
 
     $('.message a').click(function () {
@@ -32,3 +34,14 @@ $(document).ready(function () {
     });
 
 });
+
+function calcularIngreso(valor) {
+    balance +=valor;
+	return balance;
+}
+
+function calcularEgreso(valor) {
+    balance -=valor;
+	return balance;
+}
+
