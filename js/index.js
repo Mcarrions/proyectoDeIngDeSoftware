@@ -1,12 +1,10 @@
 var usuarios = [{
     "email": "alejandro@hotmail.com",
     "password": "alejandro",
-	balanceUsuario: 50
+	balanceUsuario: 0
 }]
 
-var usuario = {}
-
-var balance = usuarios[0].balanceUsuario;
+balance = usuarios[0].balanceUsuario;
 
 $(document).ready(function () {
 
@@ -61,7 +59,46 @@ function calcularEgreso() {
 }
 
 function getBalance(){
-	
 	document.getElementById("balanceDisplay").innerHTML = balance;
 }
+
+function setUserBalanceCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function checkCookie(){
+	var userBalance=getCookie("userBalance");
+     if (user != ""){
+		 this.balance = parseFloat(user);
+	 }
+	 else if(user != "0"){
+		this.balance = parseFloat(user);
+	 }
+	 else{
+		  setCookie("userBalance", 0, 30);
+		  userBalance=getCookie("userBalance");
+		  this.balance = parseFloat(user);
+	 }
+	
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 
