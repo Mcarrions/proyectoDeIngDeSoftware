@@ -6,6 +6,8 @@ var usuarios = [{
     "password": "prueba"
 }]
 
+var usuario = {}
+
 var balance;
 
 $(document).ready(function () {
@@ -43,5 +45,9 @@ function calcularIngreso(valor) {
 function calcularEgreso(valor) {
     balance -=valor;
 	return balance;
+}
+
+function funcionPrueba(){
+	document.getElementById("demo1").innerHTML = "Hello Dolly!";
 }
 
