@@ -8,13 +8,15 @@
   <link rel="stylesheet" href="css/style.css"> 
 </head>
 
-<body>
+<body onload="getBalance()">
 
  <div class="main-page">
  
  <div class="form">
 	Balance actual
-	<div id="balance"></div>
+	<div id="balance">
+	<p id="balanceDisplay"></p>
+	</div>
 	<br><br>
 	<button type="button" onclick="location.href = 'paginaingresos.html';" >Ingresos</button> 
 	<button type="button" onclick="location.href = 'paginaegresos.html';" >Egresos</button> 

@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="css/style.css"> 
 </head>
 
-<body>
+<body onload="getBalance()">
 
  <div class="main-page">
  <div class="form" >
- <form action="mainpage.html">
+ <form>
 	Balance actual
-	 <div id="balance"><p id="demo1"></p></div>
+	 <div id="balance"><p id="balanceDisplay"></p></div>
 	 <br><br>
 	 
 		Tipo de ganancia<br>
@@ -26,11 +26,11 @@
 		</select>
 		<br>
 	  Valor Ingresado<br>
-	  <input type="text" name="valoringresado">
+	  <input type="text" name="valoringresado" id="valorIn">
 	  <br>
-	  <button type="button" onclick="funcionPrueba()">Agregar al balance</button>
+	  <button type="button" onclick="calcularIngreso()">Agregar al balance</button>
 	  <br>
-	  <button type="button" onclick="location.href = 'mainpage.html';" >Cancelar</button>
+	  <button type="button" onclick="location.href = 'mainpage.html';" >Regresar</button>
  </form>
 	
  </div>

@@ -1,14 +1,12 @@
 var usuarios = [{
     "email": "alejandro@hotmail.com",
-    "password": "alejandro"
-}, {
-    "email": "prueba",
-    "password": "prueba"
+    "password": "alejandro",
+	balanceUsuario: 50
 }]
 
 var usuario = {}
 
-var balance;
+var balance = usuarios[0].balanceUsuario;
 
 $(document).ready(function () {
 
@@ -37,17 +35,33 @@ $(document).ready(function () {
 
 });
 
-function calcularIngreso(valor) {
-    balance +=valor;
-	return balance;
+function calcularIngreso() {
+	var valor = document.getElementById("valorIn").value;
+	if(isNaN(valor) || parseFloat(valor)==0){
+		alert("Ingresar un numero o valor correcto!");
+	}
+	else{
+		balance = balance + parseFloat(valor);
+		document.getElementById("balanceDisplay").innerHTML = balance;
+		usuarios[0].balanceUsuario = balance;
+	}
+    
 }
 
-function calcularEgreso(valor) {
-    balance -=valor;
-	return balance;
+function calcularEgreso() {
+	var valor = document.getElementById("valorEg").value;
+	if(isNaN(valor) || parseFloat(valor)==0.0){
+		alert("Ingresar un numero o valor correcto!");
+	}
+	else{
+		balance = balance - parseFloat(valor);
+		document.getElementById("balanceDisplay").innerHTML = balance;
+		usuarios[0].balanceUsuario = balance;
+	}
 }
 
-function funcionPrueba(){
-	document.getElementById("demo1").innerHTML = "Hello Dolly!";
+function getBalance(){
+	
+	document.getElementById("balanceDisplay").innerHTML = balance;
 }
 

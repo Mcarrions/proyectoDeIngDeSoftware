@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="css/style.css"> 
 </head>
 
-<body>
+<body onload="getBalance()">
 
  <div class="main-page">
  <div class="form" >
- <form action="mainpage.html">
+ <form>
 	Balance actual
 	 <div id="balance"></div>
 	 <br><br>
@@ -27,11 +27,11 @@
 		</select>
 		<br>
 		Valor Gastado<br>
-	  <input type="text" name="valorgastado">
+	 <input type="text" name="valorengresado" id="valorEg">
 	  <br>
-	  <input type="submit" value="Egresar">
+	  <button type="button" onclick="funcionPrueba()">Restar al balance</button>
 	  <br>
-	  <input type="submit" value="Cancelar">
+	  <button type="button" onclick="location.href = 'mainpage.html';" >Regresar</button>
  </form>
 	
  </div>
