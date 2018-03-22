@@ -1,7 +1,7 @@
 var usuarios = [{
 	"email": "alejandro@hotmail.com",
 	"password": "alejandro",
-	balanceUsuario: 0
+	balanceUsuario: 0	
 }]
 
 balance = usuarios[0].balanceUsuario;
